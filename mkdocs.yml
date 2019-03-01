@@ -1,0 +1,88 @@
+# Project information
+site_name: Docs
+site_description: Docs
+site_author: Data Solutions
+site_url: https://dsdatasolutions.github.io/dsdsdocs/
+
+# Copyright
+copyright: 'Copyright &copy; 2019 Data Solutions'
+
+# Configuration
+theme:
+  name: material
+
+  # 404 page
+  static_templates:
+    - 404.html
+
+  # Default values, taken from mkdocs_theme.yml
+  language: en
+  feature:
+    tabs: true
+  palette:
+    primary: indigo
+    accent: indigo
+  font:
+    text: Roboto
+    code: Roboto Mono
+  logo:
+    icon: "\uE80C"
+
+# Customization
+extra:
+  social:
+    - type: github-alt
+      link: https://github.com/dsdatasolutions
+    - type: twitter
+      link: https://twitter.com/DataSolutions12
+    - type: linkedin
+      link: https://linkedin.com/in/dsdatasolutions
+
+extra_javascript:
+    - 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML'
+
+# Extensions
+markdown_extensions:
+  - markdown.extensions.admonition
+  - markdown.extensions.codehilite:
+      guess_lang: false
+  - markdown.extensions.def_list
+  - markdown.extensions.footnotes
+  - markdown.extensions.meta
+  - markdown.extensions.toc:
+      permalink: true
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      user: dsdatasolutions
+      repo: dsdsdocs
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+  - markdown_include.include:
+      base_path: docs
+
+# Page tree
+nav:
+  - Home: index.md
+  - Getting started: getting_started.md
+  - Products:
+    - Close Volume: products/close_volume.md
+    - Market Volume: products/market_volume.md
+    - VIX Daily: products/vix_daily.md
+    - FINRA ATS: products/finra_ats.md
+    - Imbalance Data: products/imbl_data.md
+
+site_dir: site
